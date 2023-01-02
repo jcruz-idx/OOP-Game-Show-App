@@ -13,7 +13,7 @@ class Phrase {
 
 	addPhraseToDisplay() {
 		let HTML = '';
-		const phraseUl = document.getElementById('phrase').firstElementChild;
+		const phraseUL = document.getElementById('phrase').firstElementChild;
 
 		// (!!!)
 		[...this.phrase].forEach( c => { 
@@ -27,7 +27,14 @@ class Phrase {
 `;
 		});
 
-		phraseUl.innerHTML=HTML;
+		phraseUL.innerHTML=HTML;
+	}
+
+	checkLetter(letter) { return this.phrase.includes(letter); }
+
+	showMatchedLetter(letter) {
+		const matchingLIs = document.getElementsByClassName(letter);
+		for(let li of matchingLIs) li.classList.replace('hide', 'show');
 	}
 }
 

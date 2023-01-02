@@ -3,15 +3,28 @@
  * app.js */
 
 //[DEL Paragraph] For testing only
-const testPhrase = new Phrase('I love you');
-testPhrase.addPhraseToDisplay();
+//const testPhrase = new Phrase('I love you');
+//testPhrase.addPhraseToDisplay();
+
+//Add a tracking function like with the random quote generator for not repeats
 
 
 let game;
-const startBtn = document.getElementById('btn__reset');
+const overlay = document.getElementById('overlay');
+const keyboard = document.getElementById('qwerty');
 //const overlay = document.getElementById('overlay');
 
-startBtn.addEventListener('click', () => {
-	// 
-	document.getElementById('overlay').style.display = 'none';
+overlay.addEventListener('click', e => {
+	const btn = e.target;
+
+	if(btn.tagName!=='BUTTON') return;
+	game = new Game();
+	if(btn.id==='btn__easy') game.mode = 'easy';
+
+	game.startGame();
+});
+
+keyboard.addEventListener('click', e => {
+	const key = e.target;
+	if(key.tagName==='BUTTON') game.handleInteraction(key);
 });

@@ -60,9 +60,11 @@ button {
   cursor: pointer;
 }
 
-#btn__reset {
+#btn__reset,
+#btn__easy {
 	width: 200px;
 	margin: 0 auto;
+	margin-bottom: 1rem;
 }
 
 .main-container {
@@ -142,7 +144,8 @@ button {
   color: #FFFFFF;
 }
 
-.btn__reset {
+.btn__reset,
+.btn__easy {
   padding: 16px;
   margin: 50px auto;
   background: #f7a964;
@@ -153,7 +156,8 @@ button {
   border-right: solid 3px rgba(0, 0, 0, .3)
 }
 
-.btn__reset:active {
+.btn__reset:active,
+.btn__easy:active {
   padding: 14px 16px 16px 14px;
   border-bottom: solid 4px rgba(0, 0, 0, 0);
   border-right: solid 3px rgba(0, 0, 0, 0);
