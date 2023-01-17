@@ -10,7 +10,7 @@
 | for | Team Treehouse Full-Stack Javascript Techdegree Program, Project 4 |
 | author | Joel Cruz |
 | date | 20230116 |
-| version | 2.0.0 |
+| version | 2.0.1 |
 | version-note | Team Treehouse submission |
 | note | - |
 | jsdoc3-documentation | - |
